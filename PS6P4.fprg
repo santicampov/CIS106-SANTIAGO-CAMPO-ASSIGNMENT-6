@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="santi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-26 09:26:17 PM"/>
+        <attribute name="created" value="c2FudGk7TEFQVE9QLVRHU0xURkkwOzIwMjMtMDItMjY7MDg6NTU6MTYgUE07MjkyNw=="/>
+        <attribute name="edited" value="c2FudGk7TEFQVE9QLVRHU0xURkkwOzIwMjMtMDItMjY7MDk6MjY6MTcgUE07MzszMDM3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="qty" type="Real" array="False" size=""/>
+            <declare name="ppt" type="Real" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <output expression="&quot;Please enter the number of tickets.&quot;" newline="True"/>
+            <input variable="qty"/>
+            <if expression="qty &gt;= 25">
+                <then>
+                    <assign variable="ppt" expression="50"/>
+                </then>
+                <else>
+                    <if expression="qty &gt;= 10">
+                        <then>
+                            <assign variable="ppt" expression="60"/>
+                        </then>
+                        <else>
+                            <if expression="qty &gt;= 5">
+                                <then>
+                                    <assign variable="ppt" expression="70"/>
+                                </then>
+                                <else>
+                                    <assign variable="ppt" expression="75"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="total" expression="qty * ppt"/>
+            <output expression="&quot;For &quot; &amp;qty &amp;&quot; tickets. the price per ticket is:  $ &quot; &amp;ppt &amp;&quot;.  And the total cost is:  $ &quot; &amp;total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

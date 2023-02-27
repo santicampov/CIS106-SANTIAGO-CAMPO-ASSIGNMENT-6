@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="santi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-26 09:35:25 PM"/>
+        <attribute name="created" value="c2FudGk7TEFQVE9QLVRHU0xURkkwOzIwMjMtMDItMjY7MDk6MjY6MjcgUE07MjkyOA=="/>
+        <attribute name="edited" value="c2FudGk7TEFQVE9QLVRHU0xURkkwOzIwMjMtMDItMjY7MDk6MzU6MjUgUE07MTszMDM0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lname" type="String" array="False" size=""/>
+            <declare name="salary" type="Real" array="False" size=""/>
+            <declare name="jl" type="Real" array="False" size=""/>
+            <declare name="brate" type="Real" array="False" size=""/>
+            <declare name="bonus" type="Real" array="False" size=""/>
+            <output expression="&quot;Please enter your last name.&quot;" newline="True"/>
+            <input variable="lname"/>
+            <output expression="&quot;Please enter your salary.&quot;" newline="True"/>
+            <input variable="salary"/>
+            <output expression="&quot;Please enter your job level.&quot;" newline="True"/>
+            <input variable="jl"/>
+            <if expression="jl &gt;= 10">
+                <then>
+                    <assign variable="brate" expression="0.25"/>
+                </then>
+                <else>
+                    <if expression="jl &gt;= 5">
+                        <then>
+                            <assign variable="brate" expression="0.2"/>
+                        </then>
+                        <else>
+                            <assign variable="brate" expression="0.1"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="bonus" expression="salary * brate"/>
+            <output expression="&quot;For &quot; &amp;lname &amp;&quot; the bonus is:   $ &quot; &amp;bonus" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
